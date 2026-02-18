@@ -24,8 +24,7 @@ def home(request):
     return HttpResponse("Welcome to the Blog API!")
 
 urlpatterns = [
-    path('', home),
     path('admin/', admin.site.urls),
     path('api/v1/', include('posts.urls')),
-  
+    path('api-auth/', include('rest_framework.urls')),
 ]
